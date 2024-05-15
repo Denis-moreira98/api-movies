@@ -10,6 +10,7 @@ class CreateMovieController {
          return res.status(201).json(movie);
       } catch (error: any) {
          Logger.error(`Erro no sistema: ${error.message}`);
+         return res.status(500).json({ error: "Por favor, tente mais tarde!" });
       }
    }
 }
